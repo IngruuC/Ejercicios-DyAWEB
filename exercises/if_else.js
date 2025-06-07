@@ -1,12 +1,13 @@
 // 4. If Else
 
+function mostrarResultado(id, texto) {
+    document.querySelector(`#${id} .resultados`).innerHTML += `<pre>${texto}</pre>`;
+}
+
 // a. Número aleatorio y alerta según valor
 let random = Math.random();
-if (random >= 0.5) {
-    alert("4.a) Greater than 0.5");
-} else {
-    alert("4.a) Lower than 0.5");
-}
+let mensajeRandom = random >= 0.5 ? "4.a) Greater than 0.5" : "4.a) Lower than 0.5";
+mostrarResultado("ej4", mensajeRandom);
 
 // b. Variable Age y mensajes según rango
 let age = Math.floor(Math.random() * 101);
@@ -26,4 +27,4 @@ if (age < 2) {
 } else {
     mensaje = "Anciano";
 }
-alert("4.b) Edad: " + age + " - " + mensaje);
+mostrarResultado("ej4", "4.b) Edad: " + age + " - " + mensaje);
